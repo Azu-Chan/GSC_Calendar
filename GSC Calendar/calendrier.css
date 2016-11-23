@@ -1,0 +1,54 @@
+.cal-context{
+	padding-bottom: 25px;
+}
+.cal-day-outmonth{
+	background-color: #616161;
+}
+
+.cal-row-fluid:hover{
+	background-color: #131418;
+}
+
+.cal-day-inmonth:hover{
+	background-color: #E4E4E4;
+	border-color: #27ae60;
+	box-shadow: inset 0 1px 1px rgba(39, 174, 96, 1), 0 0 8px rgba(39, 174, 96, 1);	
+}
+
+.cal-cell1:hover{
+	background-color: #131418;
+}
+.cal-day-hour-part{
+	background-color:#131418;
+}
+.cal-row-head:hover div{
+	background-color: #131418;
+}
+
+#semaine .cal-row-fluid div {
+	background-color: #131418;
+	border-left:1px solid #E4E4E4;
+}
+
+#semaine .cal-row-fluid div:first-child{
+	border-left:none;
+}
+
+#semaine a{
+	text-decoration: none;
+	color:#E4E4E4;
+}
+
+.creerEvenement{
+	height: 100%;
+}
+
+.cal-event-week {
+	display: block;
+	width: 100%;
+	text-align:center; 
+}
+
+.non-hover:hover{
+	background-color: transparent;
+}

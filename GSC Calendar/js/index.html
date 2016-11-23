@@ -1,0 +1,69 @@
+<html>
+<head>
+<script>
+var xhr;
+
+
+function initXhr(){ 
+	if (window.XDomainRequest) 
+		xhr = new XDomainRequest(); 
+	else if (window.XMLHttpRequest)
+		xhr = new XMLHttpRequest (); 
+	else
+		console.log("Votre navigateur ne supporte pas le cross domaine..."); 
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4) {
+			if(xhr.status==200)
+				insert(xhr.responseText);
+		}
+		else {
+			document.getElementById("rssOutput").innerHTML="";
+			var nb=intervalleAleatoireInclus(1,3);
+			for(i=0;i<nb;i++){
+				document.getElementById("rssOutput").innerHTML+=".";
+			}
+		}
+}
+}
+function insert(data){
+	document.getElementById("rssOutput").innerHTML="";
+	if(window.DOMParser){
+		parser=new DOMParser();
+		xmlDoc=parser.parseFromString(data,"text/xml");
+		//var feedTitle=xmlDoc.querySelector('channel > title');
+		console.log(xmlDoc);
+	}
+}
+
+function selectionRSS(){
+	var feed=document.getElementById("feed");
+	var feedURL=feed.options[feed.selectedIndex].value;
+	console.log("url "+feedURL);
+	//var yql1=yql(feedURL,"rss");
+	xhr.open("GET","proxy.php?rssURL"+feedURL,true);
+
+	xhr.send(null);
+}
+
+function intervalleAleatoireInclus(min, max) {
+  return Math.floor(Math.random() * (max - min +1)) + min;
+}
+
+
+</script>
+</head>
+<body onload="initXhr();">
+
+<form>
+<select id="feed" onchange="selectionRSS();">
+<option value="">Sélectionnez un flux RSS:</option>
+<option value="http://filuns.unice.fr/accueil/@@rss_view">UNS</option>
+<option value="http://www.xml.com/2006/09/13/examples/google-rss.xml">Google</option>
+<option value="https://www.service-public.fr/abonnements/rss/actu-actualites-particuliers.rss">FR</option>
+</select>
+</form>
+<br>
+<div id="rssOutput">RSS-feed will be listed here...</div>
+</body>
+</html>
+  </div>

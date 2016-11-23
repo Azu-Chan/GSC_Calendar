@@ -1,0 +1,115 @@
+body{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	background-color:#131418;
+	color:#E4E4E4;
+}
+
+label span{
+	color:#27ae60;
+}
+
+span{
+	color:#27ae60;
+	font-weight:bold;	
+}
+
+.erreur{
+	color:#27ae60;
+}
+
+.form-control {
+    background-color:#F5F5F5; 
+}
+
+
+.form-control:focus{
+	  border-color: #27ae60;
+	  box-shadow: inset 0 1px 1px rgba(39, 174, 96, 1), 0 0 8px rgba(39, 174, 96, 1);
+}
+
+.navbar-brand{
+	padding:0px;
+}
+
+#nav{
+	background-color:#000000;
+}
+
+.centre{
+	text-align: center;
+	padding:25px;
+}
+
+
+.center {
+    text-align:center;
+}
+
+.center form {
+    display:inline-block;
+    width:50%;
+}
+
+#inscription{
+	display: inline-block;
+	height:50px;
+	padding-top: 12px;
+	background-color: #009343;
+	border-color:#009343;
+	text-align: center;
+}
+
+#inscription:hover{
+  	background-color: #27ae60;
+  	border-color: #27ae60;
+	box-shadow: inset 0 1px 1px rgba(39, 174, 96, 1), 0 0 8px rgba(39, 174, 96, 1);
+}
+
+.imgCentre{
+	background-color: #000000;
+	border-top: 1px solid #27ae60;
+	height:500px;
+}
+
+.imgCentre:hover{
+	margin-left:-10px;
+	padding-left: 10px;
+	box-shadow: inset 0 1px 1px rgba(39, 174, 96, 1), 0 0 8px rgba(39, 174, 96, 1);
+}
+
+.imgCentre img{
+	display: block;
+	width:220px;
+	height:220px;
+	margin:auto;
+	margin-top: 10px;
+}
+
+.btnNav{
+	background-color:#131418;
+	border-color: #131418;
+	border:none;
+}
+
+.btnNav:hover span{
+	color:white; 
+}
+
+.navbar-right {
+	text-align: center;
+}
+
+.evenement:hover{
+	background:#27ae60;
+	border-color: #27ae60;
+	box-shadow: inset 0 1px 1px rgba(39, 174, 96, 1), 0 0 8px rgba(39, 174, 96, 1);
+}
+
+.evenement:hover .glyphicon{
+	color:#E4E4E4;
+}
+
+
